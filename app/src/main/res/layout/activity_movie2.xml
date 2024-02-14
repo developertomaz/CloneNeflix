@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MovieActivity2">
+
+    <ImageView
+        android:id="@+id/movie_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/shadow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="16:9"
+        android:scaleType="centerCrop"
+        />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/movie_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+
+        />
+    <ImageView
+        android:id="@+id/play"
+        android:src="@drawable/play"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:layout_constraintTop_toTopOf="@+id/movie_img"
+        app:layout_constraintStart_toStartOf="@+id/movie_img"
+        app:layout_constraintEnd_toEndOf="@+id/movie_img"
+        app:layout_constraintBottom_toBottomOf="@+id/movie_img"
+
+        />
+
+    <TextView
+        android:id="@+id/movie_txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Cine in home"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/movie_img"
+       app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        />
+    <TextView
+        android:id="@+id/txt_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="nroejmeof fefe eefef edjjepe epfojepfj pefpe efefef eefeeewf efefe sfefff ffwwwf wffwwq qqww qdww qwdqw"
+        android:textColor="#959393"
+        app:layout_constraintTop_toBottomOf="@id/movie_txt_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="nroejmeof fefe eefef edjjepe epfojepfj pefpe efefef eefeeewf efefe sfefff ffwwwf wffwwq qqww qdww qwdqw"
+        android:textColor="#787777"
+        app:layout_constraintTop_toBottomOf="@id/txt_des"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14dp"
+        android:id="@+id/txt_cost"
+        />
+    <TextView
+        android:id="@+id/secund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opções semelhantes"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_cost"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="16dp"
+        android:textAllCaps="true"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvmovie_similar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/secund"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/movie_iten_similar"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
